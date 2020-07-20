@@ -56,6 +56,6 @@ if [ -z "$whitecolor" ];then
 fi
 
 # Image processing
-convert $file -colorspace GRAY -resize $size png:/tmp/gray.png
+convert "${file}" -colorspace GRAY -resize $size png:/tmp/gray.png
 convert /tmp/gray.png -ordered-dither $dotpatern png:/tmp/bwdot.png
-convert /tmp/bwdot.png +level-colors $blackcolor,$whitecolor png:$outpath/$(basename "$file" | sed 's/\(.*\)\..*/\1/')_$dotpatern.png
+convert /tmp/bwdot.png +level-colors $blackcolor,$whitecolor png:$outpath/"$(basename "$file" | sed 's/\(.*\)\..*/\1/')"_$dotpatern.png
