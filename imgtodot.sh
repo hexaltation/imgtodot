@@ -49,7 +49,7 @@ if [ -z "$dotpatern" ];then
     dotpatern="h8x8o"
 fi
 if [ -z "$blackcolor" ];then
-    blackcolor="#00FF00"
+    blackcolor="#000000"
 fi
 if [ -z "$whitecolor" ];then
     whitecolor="#FFFFFF"
